@@ -30,18 +30,21 @@ class OnboardingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupPageViewController()
-        setupPageControl()
+        setupLayout()
     }
 
 }
 
 // MARK: - Layout
 private extension OnboardingViewController {
+    func setupLayout() {
+        setupPageViewController()
+        setupPageControl()
+    }
     func setupPageViewController() {
         pageViewControoler.delegate = self
         pageViewControoler.dataSource = self
-        
+        pageViewControoler.view.backgroundColor = .white
         pageViewControoler.setViewControllers([pages.first!], direction: .forward, animated: true)
         
         addChild(pageViewControoler)
@@ -69,14 +72,14 @@ private extension OnboardingViewController {
 extension OnboardingViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
-        guard let currentIndex = pages.firstIndex(of: viewController), currentIndex > 0 else { return UIViewController() }
+        guard let currentIndex = pages.firstIndex(of: viewController), currentIndex > 0 else { return nil }
         
         return pages[currentIndex - 1]
         
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = pages.firstIndex(of: viewController), currentIndex < pages.count - 1 else { return UIViewController() }
+        guard let currentIndex = pages.firstIndex(of: viewController), currentIndex < pages.count - 1 else { return nil }
         
         return pages[currentIndex + 1]
     }
