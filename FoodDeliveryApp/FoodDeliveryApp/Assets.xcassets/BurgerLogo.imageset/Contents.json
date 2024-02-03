@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "BurgerLogo.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
