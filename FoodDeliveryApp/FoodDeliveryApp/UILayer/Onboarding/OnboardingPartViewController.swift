@@ -27,11 +27,14 @@ class OnboardingPartViewController: UIViewController {
             descriptionLabel.text = descriptionText
         }
     }
+    var buttonText: String?
+
     
     // MARK: - Views
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
+    
 
     
     
