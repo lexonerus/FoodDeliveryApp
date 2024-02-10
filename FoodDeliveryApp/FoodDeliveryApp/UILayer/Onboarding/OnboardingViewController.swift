@@ -12,6 +12,7 @@ class OnboardingViewController: UIViewController {
     
     // MARK: - Properties
     private var pages = [OnboardingPartViewController]()
+    private var currentPageIndex = 0
     
     // MARK: - Views
     private let pageViewControoler = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
@@ -137,8 +138,13 @@ extension OnboardingViewController: UIPageViewControllerDataSource {
 extension OnboardingViewController: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
         if let index = pages.firstIndex(of: pendingViewControllers.first! as! OnboardingPartViewController) {
-            pageControl.currentPage = index
-            let page = pages[index]
+            currentPageIndex = index
+        }
+    }
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        if completed {
+            pageControl.currentPage = currentPageIndex
+            let page = pages[currentPageIndex]
             let title = page.buttonText
             bottomButton.setTitle(title, for: .normal)
         }
