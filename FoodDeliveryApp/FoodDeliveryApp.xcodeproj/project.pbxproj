@@ -41,6 +41,8 @@
 		08E16AE52B644BB7001BEB83 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AE42B644BB7001BEB83 /* UIFont+Extension.swift */; };
 		08E16AE72B644F7D001BEB83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AE62B644F7D001BEB83 /* UIColor+Extension.swift */; };
 		08E16AE92B644FE2001BEB83 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AE82B644FE2001BEB83 /* AppColors.swift */; };
+		08FC6F302B8A3C38000EBB5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC6F2F2B8A3C38000EBB5F /* LoginViewController.swift */; };
+		08FC6F352B8A3CF4000EBB5F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC6F342B8A3CF4000EBB5F /* BottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		08E16AE42B644BB7001BEB83 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		08E16AE62B644F7D001BEB83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		08E16AE82B644FE2001BEB83 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		08FC6F2F2B8A3C38000EBB5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		08FC6F342B8A3CF4000EBB5F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,19 +132,20 @@
 			isa = PBXGroup;
 			children = (
 				08D2EC982B7808BE0075BB8B /* SceneFactory */,
-				08D196142B6E39D0001049D6 /* Onboarding */,
+				08FC6F2E2B8A3BD4000EBB5F /* AuthScene */,
+				08D196142B6E39D0001049D6 /* OnboardingScene */,
 			);
 			path = UILayer;
 			sourceTree = "<group>";
 		};
-		08D196142B6E39D0001049D6 /* Onboarding */ = {
+		08D196142B6E39D0001049D6 /* OnboardingScene */ = {
 			isa = PBXGroup;
 			children = (
 				08D196152B6E39EB001049D6 /* OnboardingViewController.swift */,
 				08D196172B6E3A18001049D6 /* OnboardingViewPresenter.swift */,
 				08D1961E2B6E43D4001049D6 /* OnboardingPartViewController.swift */,
 			);
-			path = Onboarding;
+			path = OnboardingScene;
 			sourceTree = "<group>";
 		};
 		08D2EC982B7808BE0075BB8B /* SceneFactory */ = {
@@ -239,6 +244,39 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		08FC6F2E2B8A3BD4000EBB5F /* AuthScene */ = {
+			isa = PBXGroup;
+			children = (
+				08FC6F332B8A3CC9000EBB5F /* Presenters */,
+				08FC6F322B8A3CC2000EBB5F /* Controllers */,
+				08FC6F312B8A3CBD000EBB5F /* Veiws */,
+			);
+			path = AuthScene;
+			sourceTree = "<group>";
+		};
+		08FC6F312B8A3CBD000EBB5F /* Veiws */ = {
+			isa = PBXGroup;
+			children = (
+				08FC6F342B8A3CF4000EBB5F /* BottomView.swift */,
+			);
+			path = Veiws;
+			sourceTree = "<group>";
+		};
+		08FC6F322B8A3CC2000EBB5F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08FC6F2F2B8A3C38000EBB5F /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		08FC6F332B8A3CC9000EBB5F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -330,6 +368,7 @@
 				087CB8732B6842570076414D /* AppCoordinator.swift in Sources */,
 				087CB8792B6847060076414D /* OrderCoordinator.swift in Sources */,
 				08D196162B6E39EB001049D6 /* OnboardingViewController.swift in Sources */,
+				08FC6F302B8A3C38000EBB5F /* LoginViewController.swift in Sources */,
 				08E16AB52B64453C001BEB83 /* SceneDelegate.swift in Sources */,
 				087CB87D2B6847470076414D /* ProfileCoordinator.swift in Sources */,
 				087CB87B2B68472A0076414D /* ListCoordinator.swift in Sources */,
@@ -339,6 +378,7 @@
 				08D450212B76B9ED00E89AB1 /* UserStorage.swift in Sources */,
 				08D2EC9A2B7808F70075BB8B /* SceneFactory.swift in Sources */,
 				08E16AE72B644F7D001BEB83 /* UIColor+Extension.swift in Sources */,
+				08FC6F352B8A3CF4000EBB5F /* BottomView.swift in Sources */,
 				08D196182B6E3A18001049D6 /* OnboardingViewPresenter.swift in Sources */,
 				087CB8712B683A940076414D /* Coordinator.swift in Sources */,
 			);
