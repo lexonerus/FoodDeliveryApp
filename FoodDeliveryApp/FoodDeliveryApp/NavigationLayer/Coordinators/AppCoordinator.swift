@@ -13,13 +13,14 @@ class AppCoordinator: Coordinator {
     private let factory = SceneFactory.self
     
     override func start() {
+        showOnboardingFlow()
 //        if userStorage.passedOnboarding {
 //            showMainFlow()
 //        } else {
 //            showOnboardingFlow()
 //        }
-        let loginVC = LoginViewController()
-        navigationController?.pushViewController(loginVC, animated: true)
+//        let loginVC = LoginViewController()
+//        navigationController?.pushViewController(loginVC, animated: true)
     }
     
     override func finish() {
