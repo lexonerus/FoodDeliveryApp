@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08240B6E2B9B2E2B00B7750F /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08240B6D2B9B2E2B00B7750F /* FDTextField.swift */; };
+		08240B732B9B335500B7750F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08240B722B9B335500B7750F /* LoginPresenter.swift */; };
 		087CB8712B683A940076414D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CB8702B683A940076414D /* Coordinator.swift */; };
 		087CB8732B6842570076414D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CB8722B6842570076414D /* AppCoordinator.swift */; };
 		087CB8752B68432D0076414D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CB8742B68432D0076414D /* OnboardingCoordinator.swift */; };
@@ -43,10 +45,12 @@
 		08E16AE72B644F7D001BEB83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AE62B644F7D001BEB83 /* UIColor+Extension.swift */; };
 		08E16AE92B644FE2001BEB83 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AE82B644FE2001BEB83 /* AppColors.swift */; };
 		08FC6F302B8A3C38000EBB5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC6F2F2B8A3C38000EBB5F /* LoginViewController.swift */; };
-		08FC6F352B8A3CF4000EBB5F /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC6F342B8A3CF4000EBB5F /* BottomView.swift */; };
+		08FC6F352B8A3CF4000EBB5F /* FDBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC6F342B8A3CF4000EBB5F /* FDBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08240B6D2B9B2E2B00B7750F /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
+		08240B722B9B335500B7750F /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		087CB8702B683A940076414D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		087CB8722B6842570076414D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		087CB8742B68432D0076414D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -85,7 +89,7 @@
 		08E16AE62B644F7D001BEB83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		08E16AE82B644FE2001BEB83 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
 		08FC6F2F2B8A3C38000EBB5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		08FC6F342B8A3CF4000EBB5F /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		08FC6F342B8A3CF4000EBB5F /* FDBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08240B712B9B332A00B7750F /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				08240B722B9B335500B7750F /* LoginPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
 		087CB86D2B683A460076414D /* NavigationLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				08ADF0502B97B14D0006A502 /* FDButton.swift */,
+				08240B6D2B9B2E2B00B7750F /* FDTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,7 +287,7 @@
 		08FC6F2E2B8A3BD4000EBB5F /* AuthScene */ = {
 			isa = PBXGroup;
 			children = (
-				08FC6F332B8A3CC9000EBB5F /* Presenters */,
+				08240B712B9B332A00B7750F /* Presenters */,
 				08FC6F322B8A3CC2000EBB5F /* Controllers */,
 				08FC6F312B8A3CBD000EBB5F /* Veiws */,
 			);
@@ -284,7 +297,7 @@
 		08FC6F312B8A3CBD000EBB5F /* Veiws */ = {
 			isa = PBXGroup;
 			children = (
-				08FC6F342B8A3CF4000EBB5F /* BottomView.swift */,
+				08FC6F342B8A3CF4000EBB5F /* FDBottomView.swift */,
 			);
 			path = Veiws;
 			sourceTree = "<group>";
@@ -295,13 +308,6 @@
 				08FC6F2F2B8A3C38000EBB5F /* LoginViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		08FC6F332B8A3CC9000EBB5F /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +400,7 @@
 				087CB8752B68432D0076414D /* OnboardingCoordinator.swift in Sources */,
 				087CB8732B6842570076414D /* AppCoordinator.swift in Sources */,
 				087CB8792B6847060076414D /* OrderCoordinator.swift in Sources */,
+				08240B6E2B9B2E2B00B7750F /* FDTextField.swift in Sources */,
 				08D196162B6E39EB001049D6 /* OnboardingViewController.swift in Sources */,
 				08FC6F302B8A3C38000EBB5F /* LoginViewController.swift in Sources */,
 				08E16AB52B64453C001BEB83 /* SceneDelegate.swift in Sources */,
@@ -401,11 +408,12 @@
 				087CB87B2B68472A0076414D /* ListCoordinator.swift in Sources */,
 				087CB8772B6846E50076414D /* HomeCoordinator.swift in Sources */,
 				087CB87F2B6847690076414D /* TabBarController.swift in Sources */,
+				08240B732B9B335500B7750F /* LoginPresenter.swift in Sources */,
 				08D1961F2B6E43D4001049D6 /* OnboardingPartViewController.swift in Sources */,
 				08D450212B76B9ED00E89AB1 /* UserStorage.swift in Sources */,
 				08D2EC9A2B7808F70075BB8B /* SceneFactory.swift in Sources */,
 				08E16AE72B644F7D001BEB83 /* UIColor+Extension.swift in Sources */,
-				08FC6F352B8A3CF4000EBB5F /* BottomView.swift in Sources */,
+				08FC6F352B8A3CF4000EBB5F /* FDBottomView.swift in Sources */,
 				08ADF0512B97B14D0006A502 /* FDButton.swift in Sources */,
 				08D196182B6E3A18001049D6 /* OnboardingViewPresenter.swift in Sources */,
 				087CB8712B683A940076414D /* Coordinator.swift in Sources */,

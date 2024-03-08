@@ -13,14 +13,11 @@ class AppCoordinator: Coordinator {
     private let factory = SceneFactory.self
     
     override func start() {
-        showOnboardingFlow()
-//        if userStorage.passedOnboarding {
-//            showMainFlow()
-//        } else {
-//            showOnboardingFlow()
-//        }
-//        let loginVC = LoginViewController()
-//        navigationController?.pushViewController(loginVC, animated: true)
+        if userStorage.passedOnboarding {
+            showAuthFlow()
+        } else {
+            showOnboardingFlow()
+        }
     }
     
     override func finish() {
@@ -40,6 +37,25 @@ private extension AppCoordinator {
         let tabBarController = factory.makeMainFlow(coordinator: self, finishDelegate: self)
         navigationController.pushViewController(tabBarController, animated: true)
     }
+    func showAuthFlow() {
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeAuthScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: - Methods
+extension AppCoordinator {
+    func showSignInScene() {
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeSignInScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    func showSignUpScene() {
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeSignUpScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 
 extension AppCoordinator: CoordinatorFinishDelegate {
@@ -49,7 +65,7 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         switch childCoordinatro.type {
         case .onboarding:
             navigationController?.viewControllers.removeAll()
-            showMainFlow()
+            showAuthFlow()
         case .app:
             return
         default:
