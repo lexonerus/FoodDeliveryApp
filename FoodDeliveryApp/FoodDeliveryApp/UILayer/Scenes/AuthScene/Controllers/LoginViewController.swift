@@ -26,6 +26,8 @@ class LoginViewController: UIViewController {
     
     // MARK: - Properties
     private var state: LoginViewState = .initial
+    private var keyboardIsShown = false
+    private var stackBottomValue = 0.0
     var viewOutput: LoginViewOutput!
     
     // MARK: - Views
@@ -41,6 +43,7 @@ class LoginViewController: UIViewController {
     private lazy var signInButton = FDButton()
     private lazy var signUpButton = FDButton()
     private lazy var verticalStack = UIStackView()
+    private lazy var stackBottomCT = NSLayoutConstraint()
     
     
     // MARK: - Initializers
@@ -54,12 +57,16 @@ class LoginViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        stopKeyboardListener()
+    }
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupLayout()
-    
+        setupObservers()
     }
 
     func facebookPress() {
@@ -114,18 +121,24 @@ private extension LoginViewController {
             verticalStack.addArrangedSubview(signInUsername)
             verticalStack.addArrangedSubview(signInPassword)
             
+            stackBottomValue = -262.0
+            stackBottomCT = verticalStack.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: stackBottomValue)
+            
             NSLayoutConstraint.activate([
                 verticalStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                verticalStack.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -262)
+                stackBottomCT
             ])
         case .signUp:
             verticalStack.addArrangedSubview(signUpUsername)
             verticalStack.addArrangedSubview(signUpPassword)
             verticalStack.addArrangedSubview(signUpReEnterPass)
             
+            stackBottomValue = -227.0
+            stackBottomCT = verticalStack.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: stackBottomValue)
+            
             NSLayoutConstraint.activate([
                 verticalStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                verticalStack.bottomAnchor.constraint(equalTo: bottomView.topAnchor, constant: -227)
+                stackBottomCT
             ])
         }
 
@@ -293,6 +306,45 @@ private extension LoginViewController {
             signUpReEnterPass.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -30),
             signUpReEnterPass.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+}
+
+// MARK: - Keyboard Observers
+private extension LoginViewController {
+    func setupObservers() {
+        startKeyboardListener()
+    }
+    func startKeyboardListener() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        view.addGestureRecognizer(tapGesture)
+    }
+    func stopKeyboardListener() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+    @objc func keyboardWillShow(_ notification: Notification) {
+        guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardHeight = keyboardFrame.cgRectValue.height
+        
+        if !keyboardIsShown {
+            UIView.animate(withDuration: 0.3) {
+                self.stackBottomCT.constant -= keyboardHeight/3
+                self.view.layoutIfNeeded()
+                self.keyboardIsShown = true
+            }
+        }
+    }
+    @objc func keyboardWillHide(_ notification: Notification) {
+        UIView.animate(withDuration: 0.3) {
+            self.stackBottomCT.constant = self.stackBottomValue
+            self.keyboardIsShown = false
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
