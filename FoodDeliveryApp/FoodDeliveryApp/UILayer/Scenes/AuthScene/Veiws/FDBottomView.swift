@@ -64,12 +64,14 @@ class FDBottomView: UIView {
         self.addSubview(view2)
         view2.translatesAutoresizingMaskIntoConstraints = false
         view2.image = UIImage(named: "BottomViewImage")
+        view2.contentMode = .scaleAspectFit
+        view2.clipsToBounds = true
         
         NSLayoutConstraint.activate([
             view2.topAnchor.constraint(equalTo: view1.bottomAnchor, constant: 18),
-            view2.leftAnchor.constraint(equalTo: self.leftAnchor, constant: -60),
-            view2.heightAnchor.constraint(equalToConstant: 150),
-            view2.widthAnchor.constraint(equalToConstant: 282)
+            view2.leftAnchor.constraint(equalTo: self.leftAnchor),
+            view2.heightAnchor.constraint(equalToConstant: 160),
+            view2.widthAnchor.constraint(equalToConstant: 250)
         ])
     }
     private func setupButton1() {
@@ -108,6 +110,6 @@ private extension FDBottomView {
 }
 
 
-#Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)) {
-    FDBottomView()
-}
+//#Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)) {
+//    FDBottomView()
+//}
