@@ -8,7 +8,7 @@
 import Foundation
 
 protocol LoginViewOutput: AnyObject {
-    func loginStart()
+    func loginStart(login: String, password: String)
     func registrationStart()
     func goToFacebookLogin()
     func goToGoogleLogin()
@@ -30,9 +30,28 @@ class LoginPresenter {
     
 }
 
+private extension LoginPresenter {
+    func goToMainScene() {
+        coordinator?.showMainScene()
+    }
+}
+
 extension LoginPresenter: LoginViewOutput {
-    func loginStart() {
-        
+    func loginStart(login: String, password: String) {
+        viewInput?.startLoader()
+        DispatchQueue.global().asyncAfter(deadline: .now() + 2.0) {
+            if login.lowercased() == "test@mail.com" && password == "Test123" {
+                DispatchQueue.main.async { [weak self] in
+                    self?.viewInput?.stopLoader()
+                    self?.goToMainScene()
+                }
+            } else {
+                DispatchQueue.main.async { [weak self] in
+                    self?.viewInput?.stopLoader()
+                    print("Wrong login or password")
+                }
+            }
+        }
     }
     
     func registrationStart() {

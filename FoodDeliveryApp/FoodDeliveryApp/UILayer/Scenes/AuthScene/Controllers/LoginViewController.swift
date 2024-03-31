@@ -14,12 +14,8 @@ enum LoginViewState {
 }
 
 protocol LoginViewInput: AnyObject {
-    func onSignInTapped()
-    func onSignUpTapped()
-    func onFacebookTapped()
-    func onGoogleTapped()
-    func onForgotTapped()
-    func onBackPressed()
+    func startLoader()
+    func stopLoader()
 }
 
 class LoginViewController: UIViewController {
@@ -44,6 +40,8 @@ class LoginViewController: UIViewController {
     private lazy var signUpButton = FDButton()
     private lazy var verticalStack = UIStackView()
     private lazy var stackBottomCT = NSLayoutConstraint()
+    private lazy var loader = UIActivityIndicatorView(style: .large)
+    private lazy var loaderContainer = UIView()
     
     
     // MARK: - Initializers
@@ -108,7 +106,7 @@ private extension LoginViewController {
             setupForgotLabel()
             setupNavigationBar()
         }
-
+        setupLoaderView()
     }
     func setupNavigationBar() {
         let backImage = UIImage(resource: .back)
@@ -318,6 +316,25 @@ private extension LoginViewController {
             signUpReEnterPass.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
+    func setupLoaderView() {
+        view.addSubview(loaderContainer)
+        loaderContainer.translatesAutoresizingMaskIntoConstraints = false
+        loaderContainer.backgroundColor = AppColors.black.withAlphaComponent(0.3)
+        loaderContainer.isHidden = true
+        
+        NSLayoutConstraint.activate([
+            loaderContainer.widthAnchor.constraint(equalTo: view.widthAnchor),
+            loaderContainer.heightAnchor.constraint(equalTo: view.heightAnchor)
+        ])
+        
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        loaderContainer.addSubview(loader)
+        
+        NSLayoutConstraint.activate([
+            loader.centerXAnchor.constraint(equalTo: loaderContainer.centerXAnchor),
+            loader.centerYAnchor.constraint(equalTo: loaderContainer.centerYAnchor)
+        ])
+    }
 }
 
 // MARK: - Keyboard Observers
@@ -344,7 +361,7 @@ private extension LoginViewController {
         
         if !keyboardIsShown {
             UIView.animate(withDuration: 0.3) {
-                self.stackBottomCT.constant -= keyboardHeight/3
+                self.stackBottomCT.constant -= keyboardHeight/4
                 self.view.layoutIfNeeded()
                 self.keyboardIsShown = true
             }
@@ -359,8 +376,8 @@ private extension LoginViewController {
     }
 }
 
-// MARK: - LoginViewInput delegate
-extension LoginViewController: LoginViewInput {
+// MARK: - Private methods
+private extension LoginViewController {
     func onBackPressed() {
         
     }
@@ -370,7 +387,7 @@ extension LoginViewController: LoginViewInput {
         case .initial:
             viewOutput.goToSignIn()
         case .signIn:
-            return
+            viewOutput.loginStart(login: signInUsername.text ?? "", password: signInPassword.text ?? "")
         case .signUp:
             return
         }
@@ -398,7 +415,19 @@ extension LoginViewController: LoginViewInput {
     func onForgotTapped() {
         
     }
+}
+
+// MARK: - LoginViewInput delegate
+extension LoginViewController: LoginViewInput {
+    func startLoader() {
+        loaderContainer.isHidden = false
+        loader.startAnimating()
+    }
     
+    func stopLoader() {
+        loaderContainer.isHidden = true
+        loader.stopAnimating()
+    }
 }
 
 //#Preview("LoginVC") {
