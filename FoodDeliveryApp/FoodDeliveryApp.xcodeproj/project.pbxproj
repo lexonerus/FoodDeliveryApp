@@ -15,6 +15,7 @@
 		14D07B3B2BBBBE0F00AD761E /* FoodDeliveryAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D07B3A2BBBBE0F00AD761E /* FoodDeliveryAppTests.swift */; };
 		14D07B452BBBBE0F00AD761E /* FoodDeliveryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D07B442BBBBE0F00AD761E /* FoodDeliveryAppUITests.swift */; };
 		14D07B472BBBBE0F00AD761E /* FoodDeliveryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D07B462BBBBE0F00AD761E /* FoodDeliveryAppUITestsLaunchTests.swift */; };
+		14D07B562BC0ABE800AD761E /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 14D07B552BC0ABE800AD761E /* Roboto */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		14D07B402BBBBE0F00AD761E /* FoodDeliveryAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodDeliveryAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14D07B442BBBBE0F00AD761E /* FoodDeliveryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryAppUITests.swift; sourceTree = "<group>"; };
 		14D07B462BBBBE0F00AD761E /* FoodDeliveryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		14D07B552BC0ABE800AD761E /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Roboto; path = ../../../../../../Roboto; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		14D07B222BBBBE0D00AD761E /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				14D07B532BC0ABA200AD761E /* Resources */,
 				14D07B232BBBBE0D00AD761E /* AppDelegate.swift */,
 				14D07B252BBBBE0D00AD761E /* SceneDelegate.swift */,
 				14D07B272BBBBE0D00AD761E /* ViewController.swift */,
@@ -122,6 +125,22 @@
 				14D07B462BBBBE0F00AD761E /* FoodDeliveryAppUITestsLaunchTests.swift */,
 			);
 			path = FoodDeliveryAppUITests;
+			sourceTree = "<group>";
+		};
+		14D07B532BC0ABA200AD761E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14D07B542BC0ABB100AD761E /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		14D07B542BC0ABB100AD761E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				14D07B552BC0ABE800AD761E /* Roboto */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +249,7 @@
 			files = (
 				14D07B302BBBBE0F00AD761E /* LaunchScreen.storyboard in Resources */,
 				14D07B2D2BBBBE0F00AD761E /* Assets.xcassets in Resources */,
+				14D07B562BC0ABE800AD761E /* Roboto in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
