@@ -15,11 +15,12 @@ class AppCoordinator: Coordinator, TabBarCoordinator {
     var tabBarController: UITabBarController?
     
     override func start() {
-        if userStorage.passedOnboarding {
-            showAuthFlow()
-        } else {
-            showOnboardingFlow()
-        }
+//        if userStorage.passedOnboarding {
+//            showAuthFlow()
+//        } else {
+//            showOnboardingFlow()
+//        }
+        showMainFlow()
     }
     
     override func finish() {
