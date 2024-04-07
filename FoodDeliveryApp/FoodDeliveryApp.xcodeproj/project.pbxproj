@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		08240B6E2B9B2E2B00B7750F /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08240B6D2B9B2E2B00B7750F /* FDTextField.swift */; };
 		08240B732B9B335500B7750F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08240B722B9B335500B7750F /* LoginPresenter.swift */; };
+		08537F512BC298BB00164D46 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537F502BC298BB00164D46 /* LoginCoordinator.swift */; };
 		087CB8712B683A940076414D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CB8702B683A940076414D /* Coordinator.swift */; };
 		087CB8732B6842570076414D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CB8722B6842570076414D /* AppCoordinator.swift */; };
 		087CB8752B68432D0076414D /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CB8742B68432D0076414D /* OnboardingCoordinator.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		08240B6D2B9B2E2B00B7750F /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		08240B722B9B335500B7750F /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		08537F502BC298BB00164D46 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		087CB8702B683A940076414D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		087CB8722B6842570076414D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		087CB8742B68432D0076414D /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				087CB8702B683A940076414D /* Coordinator.swift */,
 				087CB8722B6842570076414D /* AppCoordinator.swift */,
 				087CB8742B68432D0076414D /* OnboardingCoordinator.swift */,
+				08537F502BC298BB00164D46 /* LoginCoordinator.swift */,
 				087CB8762B6846E50076414D /* HomeCoordinator.swift */,
 				087CB8782B6847060076414D /* OrderCoordinator.swift */,
 				087CB87A2B68472A0076414D /* ListCoordinator.swift */,
@@ -410,6 +413,7 @@
 				087CB87F2B6847690076414D /* TabBarController.swift in Sources */,
 				08240B732B9B335500B7750F /* LoginPresenter.swift in Sources */,
 				08D1961F2B6E43D4001049D6 /* OnboardingPartViewController.swift in Sources */,
+				08537F512BC298BB00164D46 /* LoginCoordinator.swift in Sources */,
 				08D450212B76B9ED00E89AB1 /* UserStorage.swift in Sources */,
 				08D2EC9A2B7808F70075BB8B /* SceneFactory.swift in Sources */,
 				08E16AE72B644F7D001BEB83 /* UIColor+Extension.swift in Sources */,
