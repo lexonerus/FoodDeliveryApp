@@ -45,6 +45,8 @@
 		08E16AE52B644BB7001BEB83 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AE42B644BB7001BEB83 /* UIFont+Extension.swift */; };
 		08E16AE72B644F7D001BEB83 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AE62B644F7D001BEB83 /* UIColor+Extension.swift */; };
 		08E16AE92B644FE2001BEB83 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AE82B644FE2001BEB83 /* AppColors.swift */; };
+		08F60AF32BC2CA1700581278 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F60AF22BC2CA1700581278 /* HomeViewController.swift */; };
+		08F60AF62BC2CD7600581278 /* SmallHCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F60AF52BC2CD7600581278 /* SmallHCViewCell.swift */; };
 		08FC6F302B8A3C38000EBB5F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC6F2F2B8A3C38000EBB5F /* LoginViewController.swift */; };
 		08FC6F352B8A3CF4000EBB5F /* FDBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC6F342B8A3CF4000EBB5F /* FDBottomView.swift */; };
 /* End PBXBuildFile section */
@@ -90,6 +92,8 @@
 		08E16AE42B644BB7001BEB83 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		08E16AE62B644F7D001BEB83 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		08E16AE82B644FE2001BEB83 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		08F60AF22BC2CA1700581278 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		08F60AF52BC2CD7600581278 /* SmallHCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallHCViewCell.swift; sourceTree = "<group>"; };
 		08FC6F2F2B8A3C38000EBB5F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		08FC6F342B8A3CF4000EBB5F /* FDBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -165,6 +169,7 @@
 		08ADF04F2B97B1200006A502 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				08F60AEE2BC2C9DA00581278 /* HomeScene */,
 				08FC6F2E2B8A3BD4000EBB5F /* AuthScene */,
 				08D196142B6E39D0001049D6 /* OnboardingScene */,
 			);
@@ -287,6 +292,47 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		08F60AEE2BC2C9DA00581278 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				08F60AF12BC2C9FA00581278 /* Views */,
+				08F60AF02BC2C9EF00581278 /* Controllers */,
+				08F60AEF2BC2C9E300581278 /* Presenters */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		08F60AEF2BC2C9E300581278 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		08F60AF02BC2C9EF00581278 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				08F60AF22BC2CA1700581278 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		08F60AF12BC2C9FA00581278 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				08F60AF42BC2CD5100581278 /* CollectionViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		08F60AF42BC2CD5100581278 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				08F60AF52BC2CD7600581278 /* SmallHCViewCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		08FC6F2E2B8A3BD4000EBB5F /* AuthScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,8 +453,10 @@
 				08D196162B6E39EB001049D6 /* OnboardingViewController.swift in Sources */,
 				08FC6F302B8A3C38000EBB5F /* LoginViewController.swift in Sources */,
 				08E16AB52B64453C001BEB83 /* SceneDelegate.swift in Sources */,
+				08F60AF32BC2CA1700581278 /* HomeViewController.swift in Sources */,
 				087CB87D2B6847470076414D /* ProfileCoordinator.swift in Sources */,
 				087CB87B2B68472A0076414D /* ListCoordinator.swift in Sources */,
+				08F60AF62BC2CD7600581278 /* SmallHCViewCell.swift in Sources */,
 				087CB8772B6846E50076414D /* HomeCoordinator.swift in Sources */,
 				087CB87F2B6847690076414D /* TabBarController.swift in Sources */,
 				08240B732B9B335500B7750F /* LoginPresenter.swift in Sources */,
