@@ -16,6 +16,7 @@
 		14D07B452BBBBE0F00AD761E /* FoodDeliveryAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D07B442BBBBE0F00AD761E /* FoodDeliveryAppUITests.swift */; };
 		14D07B472BBBBE0F00AD761E /* FoodDeliveryAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D07B462BBBBE0F00AD761E /* FoodDeliveryAppUITestsLaunchTests.swift */; };
 		14D07B562BC0ABE800AD761E /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 14D07B552BC0ABE800AD761E /* Roboto */; };
+		14D07B592BC0AF5D00AD761E /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D07B582BC0AF5D00AD761E /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		14D07B442BBBBE0F00AD761E /* FoodDeliveryAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryAppUITests.swift; sourceTree = "<group>"; };
 		14D07B462BBBBE0F00AD761E /* FoodDeliveryAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDeliveryAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		14D07B552BC0ABE800AD761E /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Roboto; path = ../../../../../../Roboto; sourceTree = "<group>"; };
+		14D07B582BC0AF5D00AD761E /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		14D07B532BC0ABA200AD761E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				14D07B572BC0AD6300AD761E /* Extensions */,
 				14D07B542BC0ABB100AD761E /* Fonts */,
 			);
 			path = Resources;
@@ -141,6 +144,14 @@
 				14D07B552BC0ABE800AD761E /* Roboto */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		14D07B572BC0AD6300AD761E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14D07B582BC0AF5D00AD761E /* UIFont+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +287,7 @@
 			files = (
 				14D07B282BBBBE0D00AD761E /* ViewController.swift in Sources */,
 				14D07B242BBBBE0D00AD761E /* AppDelegate.swift in Sources */,
+				14D07B592BC0AF5D00AD761E /* UIFont+Extension.swift in Sources */,
 				14D07B262BBBBE0D00AD761E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
