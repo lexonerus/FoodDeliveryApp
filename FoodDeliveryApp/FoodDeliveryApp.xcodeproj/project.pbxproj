@@ -26,6 +26,8 @@
 		08D1961F2B6E43D4001049D6 /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D1961E2B6E43D4001049D6 /* OnboardingPartViewController.swift */; };
 		08D2EC9A2B7808F70075BB8B /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D2EC992B7808F70075BB8B /* SceneFactory.swift */; };
 		08D450212B76B9ED00E89AB1 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D450202B76B9ED00E89AB1 /* UserStorage.swift */; };
+		08E031662C0CBB240005074B /* FDSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E031652C0CBB240005074B /* FDSearchField.swift */; };
+		08E031682C0CC7960005074B /* FDCollectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E031672C0CC7960005074B /* FDCollectionTitle.swift */; };
 		08E16AB32B64453C001BEB83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AB22B64453C001BEB83 /* AppDelegate.swift */; };
 		08E16AB52B64453C001BEB83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AB42B64453C001BEB83 /* SceneDelegate.swift */; };
 		08E16AB72B64453C001BEB83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E16AB62B64453C001BEB83 /* ViewController.swift */; };
@@ -73,6 +75,8 @@
 		08D1961E2B6E43D4001049D6 /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		08D2EC992B7808F70075BB8B /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		08D450202B76B9ED00E89AB1 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		08E031652C0CBB240005074B /* FDSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSearchField.swift; sourceTree = "<group>"; };
+		08E031672C0CC7960005074B /* FDCollectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCollectionTitle.swift; sourceTree = "<group>"; };
 		08E16AAF2B64453C001BEB83 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08E16AB22B64453C001BEB83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		08E16AB42B64453C001BEB83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 			children = (
 				08ADF0502B97B14D0006A502 /* FDButton.swift */,
 				08240B6D2B9B2E2B00B7750F /* FDTextField.swift */,
+				08E031652C0CBB240005074B /* FDSearchField.swift */,
+				08E031672C0CC7960005074B /* FDCollectionTitle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 				08E16AB52B64453C001BEB83 /* SceneDelegate.swift in Sources */,
 				08F60AF32BC2CA1700581278 /* HomeViewController.swift in Sources */,
 				087CB87D2B6847470076414D /* ProfileCoordinator.swift in Sources */,
+				08E031662C0CBB240005074B /* FDSearchField.swift in Sources */,
 				087CB87B2B68472A0076414D /* ListCoordinator.swift in Sources */,
 				08F60AF62BC2CD7600581278 /* SmallHCViewCell.swift in Sources */,
 				087CB8772B6846E50076414D /* HomeCoordinator.swift in Sources */,
@@ -476,6 +483,7 @@
 				08ADF0512B97B14D0006A502 /* FDButton.swift in Sources */,
 				08B786072BE7BA64000E3C2E /* BigVCViewCell.swift in Sources */,
 				08D196182B6E3A18001049D6 /* OnboardingViewPresenter.swift in Sources */,
+				08E031682C0CC7960005074B /* FDCollectionTitle.swift in Sources */,
 				087CB8712B683A940076414D /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -603,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -627,6 +635,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,6 +663,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
