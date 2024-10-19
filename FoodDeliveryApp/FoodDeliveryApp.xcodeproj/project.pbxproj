@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		08240B6E2B9B2E2B00B7750F /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08240B6D2B9B2E2B00B7750F /* FDTextField.swift */; };
 		08240B732B9B335500B7750F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08240B722B9B335500B7750F /* LoginPresenter.swift */; };
+		083EF8AC2CC4629000578C44 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083EF8AB2CC4628800578C44 /* FoodCategory.swift */; };
+		083EF8B12CC4636100578C44 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083EF8B02CC4635800578C44 /* HomePresenter.swift */; };
 		08537F512BC298BB00164D46 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08537F502BC298BB00164D46 /* LoginCoordinator.swift */; };
 		087CB8712B683A940076414D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CB8702B683A940076414D /* Coordinator.swift */; };
 		087CB8732B6842570076414D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087CB8722B6842570076414D /* AppCoordinator.swift */; };
@@ -58,6 +60,8 @@
 /* Begin PBXFileReference section */
 		08240B6D2B9B2E2B00B7750F /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		08240B722B9B335500B7750F /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		083EF8AB2CC4628800578C44 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
+		083EF8B02CC4635800578C44 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		08537F502BC298BB00164D46 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		087CB8702B683A940076414D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		087CB8722B6842570076414D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -121,6 +125,22 @@
 			isa = PBXGroup;
 			children = (
 				08240B722B9B335500B7750F /* LoginPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		083EF8AA2CC4627300578C44 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				083EF8AB2CC4628800578C44 /* FoodCategory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		083EF8AD2CC4634800578C44 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				083EF8B02CC4635800578C44 /* HomePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -305,18 +325,12 @@
 		08F60AEE2BC2C9DA00581278 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				083EF8AD2CC4634800578C44 /* Presenters */,
+				083EF8AA2CC4627300578C44 /* Models */,
 				08F60AF12BC2C9FA00581278 /* Views */,
 				08F60AF02BC2C9EF00581278 /* Controllers */,
-				08F60AEF2BC2C9E300581278 /* Presenters */,
 			);
 			path = HomeScene;
-			sourceTree = "<group>";
-		};
-		08F60AEF2BC2C9E300581278 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenters;
 			sourceTree = "<group>";
 		};
 		08F60AF02BC2C9EF00581278 /* Controllers */ = {
@@ -482,7 +496,9 @@
 				08FC6F352B8A3CF4000EBB5F /* FDBottomView.swift in Sources */,
 				08ADF0512B97B14D0006A502 /* FDButton.swift in Sources */,
 				08B786072BE7BA64000E3C2E /* BigVCViewCell.swift in Sources */,
+				083EF8B12CC4636100578C44 /* HomePresenter.swift in Sources */,
 				08D196182B6E3A18001049D6 /* OnboardingViewPresenter.swift in Sources */,
+				083EF8AC2CC4629000578C44 /* FoodCategory.swift in Sources */,
 				08E031682C0CC7960005074B /* FDCollectionTitle.swift in Sources */,
 				087CB8712B683A940076414D /* Coordinator.swift in Sources */,
 			);
